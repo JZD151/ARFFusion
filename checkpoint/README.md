@@ -1,0 +1,1 @@
+The pre-trained model ```model.pth``` has given in [[*Google Drive*]](https://drive.google.com/file/d/1X1QneHZeQNwpDKhDWbGICBV4h79EvP4e/view?usp=drive_link) and [[*Baidu Yun*]](https://pan.baidu.com/s/1UDEu_Mwkl0G8TnOO8KSLlQ?pwd=968k).
