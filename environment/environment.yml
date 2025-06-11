@@ -1,4 +1,4 @@
-name: LSCI2
+name: LSCI
 channels:
   - conda-forge
   - defaults
@@ -329,4 +329,4 @@ dependencies:
       - wcwidth==0.2.13
       - werkzeug==3.1.3
       - yapf==0.43.0
-prefix: /home/mygo/下载/ENTER/envs/LSCI2
+prefix: /home/mygo/下载/ENTER/envs/LSCI
