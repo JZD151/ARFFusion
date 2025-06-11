@@ -1,7 +1,4 @@
 # ARFFusion
-
-[![LICENSE](https://img.shields.io/badge/License-MIT-green)](https://github.com/lok-18/IGNet/blob/master/LICENSE)
-
 ### Adversarially Robust Fourier-Aware Multimodal Medical Image Fusion for LSCI
 ### ‼️*Environment* 
 
