@@ -98,7 +98,20 @@ def main(args, datafolder):
             logits = (logits - logits.min())/(logits.max() - logits.min())
 
             fusion_ycrcb = logits
-            fusion_image = fusion_ycrcb
+
+            # Generate a grayscale map
+            # fusion_image = fusion_ycrcb
+            
+            # Generate a color map`
+            if adv_image_vis.shape[-3] == 3:
+                fusion_ycrcb = torch.cat(
+                    (logits, adv_image_vis_ycrcb[:, 1:2, :, :], adv_image_vis_ycrcb[:, 2:, :, :]),
+                    dim=1,
+                )
+                fusion_image = YCrCb2RGB(fusion_ycrcb)
+            else:
+                fusion_ycrcb = logits
+                fusion_image = fusion_ycrcb
 
             ones = torch.ones_like(fusion_image)
             zeros = torch.zeros_like(fusion_image)
@@ -135,10 +148,12 @@ def main(args, datafolder):
                     image_fused = Image.fromarray(image_fused)
                 else:
                     image_fused = Image.fromarray(image_fused[:, :, 0], mode="L")
+                
                 if adv_vis.shape[-1]==3:
                     adv_vis = Image.fromarray(adv_vis)
                 else:
                     adv_vis = Image.fromarray(adv_vis[:, :, 0], mode="L")
+
                 adv_ir = Image.fromarray(adv_ir)
 
                 save_path_fused = os.path.join(args.outdir, datafolder, 'fused', name[k])
@@ -253,5 +268,3 @@ if __name__ == "__main__":
         os.makedirs(args.outdir+'/'+datafolder+'/advmri', mode=0o777, exist_ok=True)
         main(args, datafolder)
     print("Attack finish!")
-
-
