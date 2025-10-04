@@ -44,7 +44,7 @@ conda activate LSCI
 > The configuration of the training dataset is similar to the aforementioned format.
 
 ### 🖥️*Test*
-> The pre-trained model `model.pth` has given in [[*Google Drive*\]](https://drive.google.com/file/d/1X1QneHZeQNwpDKhDWbGICBV4h79EvP4e/view?usp=drive_link) and [[*Baidu Yun*\]](https://pan.baidu.com/s/1UDEu_Mwkl0G8TnOO8KSLlQ?pwd=968k).
+> The pre-trained model `model.pth` has given in [[*Google Drive*\]](https://drive.google.com/drive/folders/1WK_kSN-xHo1x1DOppNmSW7MH9cxeudsx?usp=sharing) and [[*Baidu Yun*\]](https://pan.baidu.com/s/1UDEu_Mwkl0G8TnOO8KSLlQ?pwd=968k).
 >
 > Please put ```model.pth``` into ```./checkpoint/``` and run ```test_robust.py``` to get fused results. You can check them in:
 > ```
